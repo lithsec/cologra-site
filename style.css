@@ -1,0 +1,25 @@
+/* Cologra site — mirrors the app theme (packages/shared/src/theme.ts). */
+:root { --bg: #0b0f14; --ink: #e8eef5; --dim: #8fa0b3; --teal: #14b8a6; --teal-bright: #5eead4; --line: #24303f; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.65;
+  background-image: radial-gradient(55rem 38rem at 12% -12%, rgba(20, 184, 166, 0.10), transparent 60%);
+  background-attachment: fixed;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+a { color: var(--teal-bright); }
+.brand { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; }
+.brand span { color: var(--teal-bright); }
+.tagline { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(45, 212, 191, 0.8); margin-top: 0.2rem; }
+header { margin-bottom: 2.5rem; }
+h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 0.25rem; }
+.updated { color: var(--dim); font-size: 0.85rem; margin: 0 0 2.5rem; }
+h2 { font-size: 1.1rem; margin: 2.2rem 0 0.5rem; color: #f8fafc; }
+ul { padding-left: 1.25rem; margin: 0.5rem 0; }
+li { margin-top: 0.4rem; }
+footer { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; font-size: 0.85rem; color: #64748b; }
+.hero p { font-size: 1.05rem; }
+.quiet { color: var(--dim); }
