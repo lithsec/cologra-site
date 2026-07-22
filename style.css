@@ -69,3 +69,7 @@ section.block > p { color: var(--ink-soft); max-width: 38rem; }
 .closing { text-align: center; border-top: 1px solid var(--line); padding-top: 2.6rem; }
 .closing p { margin-left: auto; margin-right: auto; }
 .bp footer p { margin: 0 0 0.4rem; }
+.demo { margin: 1.9rem auto 0.4rem; max-width: 24rem; }
+.demo-label { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 0.5rem; }
+.demo audio { width: 100%; }
+.demo-sub { color: var(--faint); font-size: 0.76rem; margin: 0.45rem 0 0; line-height: 1.5; }
