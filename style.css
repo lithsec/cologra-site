@@ -1,6 +1,13 @@
-/* Cologra site — mirrors the app theme (packages/shared/src/theme.ts). */
-:root { --bg: #0b0f14; --ink: #e8eef5; --dim: #8fa0b3; --teal: #14b8a6; --teal-bright: #5eead4; --line: #24303f; }
+/* Cologra site — mirrors the app theme (packages/shared/src/theme.ts).
+   Design: dark field, teal = motion, gold = treasure. One bold move (the radar hero);
+   everything else quiet. System stack + mono eyebrows; no webfonts, no external assets. */
+:root {
+  --bg: #0b0f14; --bg-deep: #0a0e13; --surface: #121826; --line: #24303f;
+  --ink: #e8eef5; --ink-soft: #c7d2df; --dim: #8fa0b3; --faint: #64748b;
+  --teal: #14b8a6; --teal-bright: #5eead4; --gold: #e0b64f;
+}
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 html, body { margin: 0; padding: 0; }
 body {
   background: var(--bg); color: var(--ink);
@@ -9,17 +16,50 @@ body {
   background-image: radial-gradient(55rem 38rem at 12% -12%, rgba(20, 184, 166, 0.10), transparent 60%);
   background-attachment: fixed;
 }
-main { max-width: 42rem; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+main { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
 a { color: var(--teal-bright); }
 .brand { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; }
 .brand span { color: var(--teal-bright); }
 .tagline { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(45, 212, 191, 0.8); margin-top: 0.2rem; }
-header { margin-bottom: 2.5rem; }
+header.site { margin-bottom: 2.5rem; }
 h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 0.25rem; }
 .updated { color: var(--dim); font-size: 0.85rem; margin: 0 0 2.5rem; }
 h2 { font-size: 1.1rem; margin: 2.2rem 0 0.5rem; color: #f8fafc; }
 ul { padding-left: 1.25rem; margin: 0.5rem 0; }
 li { margin-top: 0.4rem; }
-footer { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; font-size: 0.85rem; color: #64748b; }
+footer { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; font-size: 0.85rem; color: var(--faint); }
 .hero p { font-size: 1.05rem; }
 .quiet { color: var(--dim); }
+
+/* ── Brand page ─────────────────────────────────────────────────────────── */
+.bp main { max-width: 52rem; }
+.radar { position: relative; margin: 3.2rem auto 2.6rem; width: 15rem; height: 15rem; }
+.radar .ring { position: absolute; inset: 0; border: 1px solid rgba(94, 234, 212, 0.35); border-radius: 50%; animation: ping 3.2s cubic-bezier(0.2, 0.6, 0.4, 1) infinite; }
+.radar .ring:nth-child(2) { animation-delay: 1.07s; }
+.radar .ring:nth-child(3) { animation-delay: 2.14s; }
+.radar .dot { position: absolute; left: 50%; top: 50%; width: 0.65rem; height: 0.65rem; margin: -0.325rem; border-radius: 50%; background: var(--gold); box-shadow: 0 0 18px rgba(224, 182, 79, 0.8); }
+@keyframes ping { 0% { transform: scale(0.08); opacity: 0.9; } 80% { opacity: 0.12; } 100% { transform: scale(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .radar .ring { animation: none; opacity: 0.25; transform: scale(0.55); } .radar .ring:nth-child(2) { transform: scale(0.8); } .radar .ring:nth-child(3) { transform: scale(1); } }
+.bp .hero { text-align: center; }
+.bp .hero h1 { font-size: clamp(2.2rem, 6vw, 3.3rem); line-height: 1.12; letter-spacing: -0.03em; margin: 0 0 1rem; text-wrap: balance; }
+.bp .hero h1 em { font-style: normal; color: var(--teal-bright); }
+.bp .hero .lede { font-size: 1.12rem; color: var(--ink-soft); max-width: 34rem; margin: 0 auto; text-wrap: balance; }
+.beta { display: inline-block; margin-top: 1.6rem; padding: 0.55rem 1.1rem; border: 1px solid var(--line); border-radius: 999px; color: var(--dim); font-size: 0.85rem; }
+.beta a { text-decoration: none; font-weight: 600; }
+.eyebrow { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin: 0 0 0.6rem; }
+section.block { margin-top: 4.6rem; }
+section.block h2 { font-size: 1.65rem; letter-spacing: -0.02em; margin: 0 0 0.8rem; text-wrap: balance; }
+section.block > p { color: var(--ink-soft); max-width: 38rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr)); gap: 0.9rem; margin-top: 1.4rem; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem 1.2rem; }
+.card h3 { margin: 0 0 0.35rem; font-size: 0.98rem; color: var(--ink); }
+.card p { margin: 0; font-size: 0.88rem; color: var(--dim); line-height: 1.55; }
+.proof { border-left: 3px solid var(--teal); background: rgba(20, 184, 166, 0.06); border-radius: 0 12px 12px 0; padding: 0.9rem 1.2rem; margin-top: 1.3rem; font-size: 0.92rem; color: var(--ink-soft); }
+.proof code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.85em; color: var(--teal-bright); }
+.cites { margin-top: 1rem; font-size: 0.8rem; color: var(--faint); }
+.langs { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: 0.45rem 0.6rem; }
+.langs span { border: 1px solid var(--line); border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.82rem; color: var(--dim); }
+.refuse { margin-top: 1.4rem; }
+.refuse li { color: var(--dim); font-size: 0.92rem; }
+.refuse li strong { color: var(--ink-soft); font-weight: 600; }
+.bp footer { text-align: center; }

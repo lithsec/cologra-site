@@ -1,25 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cologra — correr · lograr</title>
-  <meta name="description" content="Audio-first, reward-based running. Find treasures as you run — no account, no servers, private by design.">
+  <title>Cologra — Run for treasure. Play it with your ears.</title>
+  <meta name="description" content="An audio-first running game: treasures on real paths, a coach that tells the truth, and a promise no big fitness app can make — your runs never leave your phone.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%235eead4' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%235eead4' stroke-width='1.4' opacity='.5'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23e0b64f'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <main>
-  <header>
+  <header class="site" style="text-align:center">
     <a class="brand" href="/">Co<span>logra</span><span class="tagline">correr · lograr</span></a>
   </header>
+
   <div class="hero">
-    <h1>Run for treasure.</h1>
-    <p>Cologra turns every run into a treasure hunt you play with your ears, not your eyes. Treasures spawn on real
-    paths around you; audio pings guide you in; an honest voice coach tells you what's actually winnable.</p>
-    <p class="quiet">No account. No servers. Your runs never leave your phone. Coming soon to iPhone and Android.</p>
+    <div class="radar" aria-hidden="true">
+      <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+      <div class="dot"></div>
+    </div>
+    <h1>Run for treasure.<br>Play it with <em>your ears</em>.</h1>
+    <p class="lede">Treasures spawn on the real paths around you. Stereo pings tell you where —
+    left, right, closer, warmer. Reach one before its timer runs out and it's yours.
+    Eyes on the road, phone in your pocket, the whole time.</p>
+    <p class="beta">In private beta · Android now, iPhone soon · <a href="mailto:support@vortas.io">ask for an invite</a></p>
   </div>
+
+  <section class="block">
+    <p class="eyebrow">01 · Sound</p>
+    <h2>The first running game designed for ears, not screens</h2>
+    <p>Every other running app assumes you'll look at it. Cologra assumes you won't — and builds
+    the entire game out of sound.</p>
+    <div class="cards">
+      <div class="card"><h3>Spatial treasure pings</h3><p>Pings pan left and right by true bearing and rise in pitch as you close in. Close your eyes and you can point at the treasure.</p></div>
+      <div class="card"><h3>A coach that speaks when it matters</h3><p>Whether a chase is still winnable, when to let one go, when your own stride says you're tiring. No chatter, no filler.</p></div>
+      <div class="card"><h3>Your music stays yours</h3><p>Cues duck the volume for a moment and get out of the way. Never paused, never interrupted.</p></div>
+      <div class="card"><h3>Built for blind runners too</h3><p>Eyes-free by design means screen-reader and voice-query support isn't an afterthought — it's the same product.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">02 · Privacy</p>
+    <h2>Your runs never leave your phone</h2>
+    <p>Not "we take privacy seriously." Architecturally, literally: Cologra has no accounts and
+    runs no servers. Routes, times, fitness — all of it lives on your device and nowhere else.
+    Optional backup goes to <strong>your</strong> iCloud or a folder you pick, off by default,
+    behind a consent screen that says exactly what's in the file.</p>
+    <div class="proof">Don't take our word for it — decompile the app. A <code>strings</code> scan
+    of the shipped binary finds zero server endpoints, zero API keys, zero trackers, zero ad SDKs.
+    The only network traffic is downloading public map data. Even the coverage map renders
+    entirely on-device.</div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">03 · Honesty</p>
+    <h2>A coach that shows its work</h2>
+    <p>Your fitness model is a Critical Speed fit of your own efforts — sports science older than
+    the smartwatch, computed on your phone. Every headline number has a "why?" that opens the
+    actual reasoning, citations included.</p>
+    <ul class="refuse">
+      <li><strong>No daily-streak guilt.</strong> Streaks count weeks here — rest days are training, and daily-run streaks are an injury mechanic. We refuse them.</li>
+      <li><strong>No fake metrics.</strong> A phone can't honestly measure ground-contact time or vertical oscillation, so Cologra doesn't pretend to. Cadence and stride length — measured against <em>your own</em> baseline, never a universal number.</li>
+      <li><strong>No made-up scores.</strong> No "readiness percentages," no proprietary mystery indexes. If we can't explain a number, we don't show it.</li>
+    </ul>
+    <p class="cites">Monod &amp; Scherrer (1965) · Jones et al. (2010) · Heiderscheit et al. (2011) · Schubert et al. (2014) · Mujika &amp; Padilla (2000)</p>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">04 · Play</p>
+    <h2>Compete with the only person who matters</h2>
+    <div class="cards">
+      <div class="card"><h3>Race your ghost</h3><p>Start from a familiar spot and you're up against your own previous run — "you're 30 meters ahead of last Tuesday's you." No leaderboards, no strangers.</p></div>
+      <div class="card"><h3>Explore every street</h3><p>The app knows which paths around you you've never run, tells you where the unexplored ground is, and draws your coverage map — computed entirely on your phone.</p></div>
+      <div class="card"><h3>Duo runs, no servers</h3><p>Agree on a code word with a friend and you both hunt the exact same treasures, wherever each of you runs. Compare hauls after.</p></div>
+      <div class="card"><h3>Own your data</h3><p>One-tap export of everything you've earned. Works across platforms — even Android to iPhone. Delete the app, and it's genuinely gone.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">05 · Idioma</p>
+    <h2>Speaks 19 languages — out loud</h2>
+    <p>Interface and voice coaching, both. The name is the mission: <em>correr</em> + <em>lograr</em> — run, achieve.</p>
+    <div class="langs">
+      <span>English</span><span>Español</span><span>Français</span><span>Deutsch</span><span>Português</span>
+      <span>Italiano</span><span>日本語</span><span>Nederlands</span><span>Svenska</span><span>Norsk bokmål</span>
+      <span>Dansk</span><span>한국어</span><span>Türkçe</span><span>Bahasa Indonesia</span><span>中文</span>
+      <span>Polski</span><span>Русский</span><span>Українська</span><span>Čeština</span>
+    </div>
+  </section>
+
   <footer>
-    <a href="/privacy/">Privacy</a> · <a href="/support/">Support</a>
+    <a href="/privacy/">Privacy</a> · <a href="/support/">Support</a> · <a href="mailto:support@vortas.io">support@vortas.io</a>
   </footer>
 </main>
 </body>
