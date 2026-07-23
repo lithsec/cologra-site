@@ -73,3 +73,7 @@ section.block > p { color: var(--ink-soft); max-width: 38rem; }
 .demo-label { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 0.5rem; }
 .demo audio { width: 100%; }
 .demo-sub { color: var(--faint); font-size: 0.76rem; margin: 0.45rem 0 0; line-height: 1.5; }
+.utters { list-style: none; padding: 0; margin: 1.3rem 0 0; display: grid; gap: 0.55rem; }
+.utters li { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 0.55rem 1.1rem; font-size: 0.92rem; color: var(--ink-soft); width: fit-content; max-width: 100%; }
+.utter-note { color: var(--faint); font-size: 0.8rem; }
+.utter-android { margin-top: 1.2rem; color: var(--dim); font-size: 0.9rem; max-width: 38rem; }
